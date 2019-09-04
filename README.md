@@ -1,4 +1,4 @@
-![Status](https://github.com/jzylks/centos-django-rpm/workflows/dockerimage/badge.svg)
+![Status](https://github.com/jzylks/centos-django-rpm/workflows/dockerimage.yml/badge.svg)
 
 # centos-rpm-builder
 
