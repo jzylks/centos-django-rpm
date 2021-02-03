@@ -8,3 +8,7 @@ RUN yum localinstall -y atomic-sqlite-sqlite-3.8.5-3.el7.art.x86_64.rpm
 RUN mv /lib64/libsqlite3.so.0.8.6{,-3.17}
 RUN cp /opt/atomic/atomic-sqlite/root/usr/lib64/libsqlite3.so.0.8.6 /lib64
 RUN pip install git+http://git@github.com/jzylks/rpmvenv-centos.git
+RUN mkdir /data
+
+ENV QA_SKIP_BUILD_ROOT=1
+CMD ["rpmvenv", "/data/rpm-config.json"]
