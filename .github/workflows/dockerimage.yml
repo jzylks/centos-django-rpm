@@ -4,6 +4,7 @@ on:
   push:
   schedule:
     - cron: '25 18 * * WED'
+  workflow_dispatch: {}
 
 jobs:
   push_to_registry:
