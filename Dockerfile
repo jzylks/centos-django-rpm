@@ -11,4 +11,5 @@ RUN pip install git+http://git@github.com/jzylks/rpmvenv-centos.git
 RUN mkdir /data
 
 ENV QA_SKIP_BUILD_ROOT=1
+ENV PIP_CACHE_DIR=/data/.cache/pip
 CMD ["rpmvenv", "/data/rpm-config.json"]
