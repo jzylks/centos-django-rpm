@@ -17,3 +17,5 @@ RUN mkdir /data
 
 ENV QA_SKIP_BUILD_ROOT=1
 ENV PIP_CACHE_DIR=/data/.cache/pip
+ENV LC_ALL=en_US.utf-8
+ENV LANG=en_US.utf-8
