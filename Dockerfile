@@ -9,7 +9,7 @@ RUN yum install -y git224 git2u python2-pip python36 python36-devel openldap-dev
 COPY sqlite-autoconf-3350400.tar.gz /root/sqlite-autoconf-3350400.tar.gz
 RUN cd /root ; tar xzf sqlite-autoconf-3350400.tar.gz
 RUN cd /root/sqlite-autoconf-3350400 ; ./configure && make && make install 
-ENV LD_RUN_PATH=/usr/local/lib
+ENV LD_LIBRARY_PATH=/usr/local/lib
 
 RUN pip install git+http://git@github.com/jzylks/rpmvenv-centos.git
 RUN pip3 install --upgrade pip
