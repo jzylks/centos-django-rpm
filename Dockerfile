@@ -4,7 +4,7 @@ COPY sign_rpm.sh /usr/local/bin/sign_rpm.sh
 
 RUN yum install -y epel-release
 RUN yum install -y https://repo.ius.io/ius-release-el7.rpm
-RUN yum install -y git224 git2u python2-pip python36 python36-devel openldap-devel mariadb-devel gcc rpm-build
+RUN yum install -y git224 git2u python2-pip python36 python36-devel openldap-devel mariadb-devel gcc rpm-build make
 
 COPY sqlite-autoconf-3350400.tar.gz /root/sqlite-autoconf-3350400.tar.gz
 RUN cd /root ; tar xzf sqlite-autoconf-3350400.tar.gz
