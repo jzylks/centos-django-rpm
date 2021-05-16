@@ -13,6 +13,7 @@ ENV LD_LIBRARY_PATH=/usr/local/lib
 
 RUN pip install 'jinja2<3.0'
 RUN pip install git+http://git@github.com/jzylks/rpmvenv-centos.git
+RUN pip3 install 'jinja2<3.0'
 RUN pip3 install --upgrade pip
 RUN pip3 install wheel flake8 flake8-dashboard coverage pytest pytest-django pytest-cov pipenv
 
