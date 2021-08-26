@@ -25,6 +25,7 @@ jobs:
             type=ref,event=pr
       -
         name: Set up Docker Buildx
+        id: buildx
         uses: docker/setup-buildx-action@v1
       -
         name: Login to DockerHub
@@ -40,6 +41,7 @@ jobs:
           context: .
           pull: true
           push: ${{ github.event_name != 'pull_request' }}
+          builder: ${{ steps.buildx.outputs.name }}
           cache-from: type=registry,ref=jzylks/centos-django-rpm:latest
           cache-to: type=inline
-          tags: jzylks/centos-django-rpm:latest
+          tags: ghcr.io/jzylks/centos-django-rpm:latest
