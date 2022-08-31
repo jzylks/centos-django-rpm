@@ -11,7 +11,7 @@ RUN cd /root ; tar xzf sqlite-autoconf-3350400.tar.gz
 RUN cd /root/sqlite-autoconf-3350400 ; ./configure && make && make install 
 ENV LD_LIBRARY_PATH=/usr/local/lib
 
-RUN pip3 install git+http://git@github.com/jzylks/rpmvenv-centos.git
+RUN pip3 install git+ssh://git@github.com:jzylks/rpmvenv-centos.git
 RUN pip3 install --upgrade pip
 RUN pip3 install wheel flake8 flake8-dashboard coverage pytest pytest-django pytest-cov pipenv
 
